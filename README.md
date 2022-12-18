@@ -28,7 +28,10 @@ Host <hostname>
 ```
  
 ## Usage
-To use the tool, simply run the script in a terminal:
+To use the tool  set your configuration file(s)
+`confFiles="/home/user/.ssh/conf.d/*" `
+
+and then simply run the script in a terminal:
 
   `./ssh-select.sh`
 
