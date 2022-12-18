@@ -31,9 +31,11 @@ Host <hostname>
 To use the tool  set your configuration file(s)
 `confFiles="/home/user/.ssh/conf.d/*" `
 
-and then simply run the script in a terminal: `./ssh-select.sh`
+Make the script executable: `chmod +x script.sh`
 
-usign alias to run run script would be better:
+And then simply run the script in a terminal: `./ssh-select.sh`
+
+Using alias to run run script would be better:
 `alias alias_name='/path/to/ssh-select.sh'`
 
 The script will display a list of all available SSH connections, and you can start typing to filter the list in real-time. Use the up and down arrow keys to navigate the list, and press Enter to select the currently highlighted host. The script will then connect to the selected host via ssh.
