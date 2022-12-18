@@ -14,7 +14,7 @@ search_string=""
 selected_index=0
 
 # Configuration files
-confFiles="/Users/uemit.dogu/.ssh/conf.d/delete/*"
+confFiles="/home/user/.ssh/conf.d/*"
 
 # all hosts from configuration files
 allHosts=$(grep -E "Host "  $confFiles | awk '{print $2}')
