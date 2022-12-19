@@ -21,11 +21,6 @@ allHosts=$(grep -E "Host "  $confFiles | awk '{print $2}')
 
 # Continuously display the matching hosts in real time as the user types
 while true; do
-  # Clear the current line
-  printf "\r"
-
-  # set the cursor to top-left
-  tput cup 0 0
 
   # Read a single character from the user
   read -n1 char
@@ -38,6 +33,10 @@ while true; do
     host=${matching_hosts[$selected_index]}
     # Clear the screen
     clear
+    # Reset the terminal settings
+    stty echo
+    stty icanon
+    # Connect to the host
     ssh "$host"
     break
   fi
@@ -110,4 +109,3 @@ done
 # Reset the terminal settings
 stty echo
 stty icanon
-
